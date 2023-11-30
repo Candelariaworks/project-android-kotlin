@@ -6,13 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
-    <ListView
-        android:id="@+id/listaarticulos"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="352dp"
+        android:layout_height="217dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="ESTA ES LA SEGUNDA PANTALLA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@android:layout/simple_list_item_1" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
