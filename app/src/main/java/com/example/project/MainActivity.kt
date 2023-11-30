@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             if (email == "usuario@example.com" && password == "contraseña123") {
                 val intent = Intent(this, MainActivity2::class.java)
                 startActivity(intent)
-                finish() // Cierra MainActivity
+                finish()
             } else {
                 Toast.makeText(this, "Email/Usuario o contraseña incorrecta", Toast.LENGTH_LONG).show()
             }
