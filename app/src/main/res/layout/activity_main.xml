@@ -23,7 +23,7 @@
         android:clickable="true"
         android:contentDescription="@string/fab_description"
         android:focusable="true"
-        android:tint="#42A5F5"
+        android:tint="#5C6BC0"
         app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import com.google.android.material.button.MaterialButton
 
 class MainActivity3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +25,11 @@ class MainActivity3 : AppCompatActivity() {
                 putExtra("descripcion", descripciones[position])
             }
             startActivity(intent)
+        }
+        val buttonRegresar = findViewById<MaterialButton>(R.id.buttonRegresar)
+        buttonRegresar.setOnClickListener {
+            // Finalizar esta actividad nos llevará de vuelta a la actividad anterior en la pila
+            finish()
         }
     }
 }
