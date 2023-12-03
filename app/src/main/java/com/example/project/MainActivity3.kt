@@ -1,9 +1,12 @@
 package com.example.project
 
+import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.ImageView
 import android.widget.ListView
 import com.google.android.material.button.MaterialButton
 

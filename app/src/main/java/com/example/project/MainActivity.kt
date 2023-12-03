@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
 
-            if (email == "usuario@example.com" && password == "contraseña123") {
+            if (email == "usuario@example.com" && password == "contrasena123") {
                 val intent = Intent(this, MainActivity2::class.java)
                 startActivity(intent)
                 finish()
