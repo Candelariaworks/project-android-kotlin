@@ -1,6 +1,7 @@
 package com.example.project
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -10,6 +11,7 @@ import android.widget.Toast
 class MainActivity2 : AppCompatActivity() {
     private val listaArticulos = mutableListOf<String>()
     private val listaDescripciones = mutableListOf<String>()
+    private val listaImagenes = mutableListOf<Uri?>() // Agregamos lista de URIs para las imágenes
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
