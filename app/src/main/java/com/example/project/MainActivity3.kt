@@ -1,13 +1,11 @@
 package com.example.project
 
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
-import android.widget.ImageView
 import android.widget.ListView
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 
 class MainActivity3 : AppCompatActivity() {
@@ -24,14 +22,15 @@ class MainActivity3 : AppCompatActivity() {
 
         listView.setOnItemClickListener { _, _, position, _ ->
             val intent = Intent(this, MainActivity4::class.java).apply {
+                putExtra("position", position)
                 putExtra("titulo", titulos[position])
                 putExtra("descripcion", descripciones[position])
             }
             startActivity(intent)
         }
+
         val buttonRegresar = findViewById<MaterialButton>(R.id.buttonRegresar)
         buttonRegresar.setOnClickListener {
-            // Finalizar esta actividad nos llevará de vuelta a la actividad anterior en la pila
             finish()
         }
     }

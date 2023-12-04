@@ -24,16 +24,18 @@ class MainActivity2 : AppCompatActivity() {
         buttonGuardar.setOnClickListener {
             val titulo = editTextTitulo.text.toString()
             val descripcion = editTextDescripcion.text.toString()
-            Toast.makeText(this,"Artículo guardado.",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Artículo guardado.", Toast.LENGTH_SHORT).show()
 
-            if(titulo.isNotEmpty() && descripcion.isNotEmpty()) {
+            if (titulo.isNotEmpty() && descripcion.isNotEmpty()) {
                 listaArticulos.add(titulo)
                 listaDescripciones.add(descripcion)
+                listaImagenes.add(null) // Inicializa la URI de la imagen como nula
             }
 
             editTextTitulo.text.clear()
             editTextDescripcion.text.clear()
         }
+
 
         val buttonVerArticulos = findViewById<Button>(R.id.btnVerArticulos)
         buttonVerArticulos.setOnClickListener {

@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#B1EAE8"
+    android:background="@color/material_dynamic_primary10"
     tools:context=".MainActivity3">
 
 
     <ListView
         android:id="@+id/listViewArticulos"
-        android:background="#B1EAE8"
         android:layout_width="409dp"
         android:layout_height="641dp"
+        android:background="@android:color/system_accent1_900"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

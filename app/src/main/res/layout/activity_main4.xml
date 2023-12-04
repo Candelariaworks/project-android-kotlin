@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:gravity="center"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
@@ -27,27 +28,31 @@
         android:layout_width="356dp"
         android:layout_height="304dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="256dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="96dp"
         android:background="@drawable/edit_text_background"
+        android:textColor="@color/black"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.695"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewTitulo" />
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonPickImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="41dp"
         android:background="@drawable/rounded_button"
         android:text="Seleccionar imagen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
+        app:backgroundTint="@android:color/holo_purple"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDescripcion"
+        app:layout_constraintEnd_toStartOf="@+id/buttonGuardarImagen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.367" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -65,15 +70,18 @@
         android:id="@+id/buttonGuardarImagen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="352dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/rounded_button"
         android:text="Guardar imagen"
-        app:layout_constraintBottom_toTopOf="@+id/buttonVolver"
+        app:backgroundTint="@android:color/holo_purple"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDescripcion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.911"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintStart_toEndOf="@+id/buttonPickImage"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonVolver"
@@ -86,5 +94,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="299dp"
+        android:layout_marginEnd="411dp"
+        android:layout_marginBottom="432dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="312dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

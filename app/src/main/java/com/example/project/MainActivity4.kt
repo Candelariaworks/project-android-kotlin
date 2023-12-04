@@ -23,6 +23,7 @@ import java.io.InputStream
 
 class MainActivity4 : AppCompatActivity() {
     private lateinit var imageView: ImageView
+    private var currentItemPosition: Int = -1
 
     // ActivityResultLauncher para seleccionar la imagen
     private val pickImageLauncher = registerForActivityResult(
@@ -43,6 +44,8 @@ class MainActivity4 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main4)
+
+        currentItemPosition = intent.getIntExtra("position", -1)
 
         imageView = findViewById(R.id.imageView)
 
@@ -69,7 +72,7 @@ class MainActivity4 : AppCompatActivity() {
 
         // Recuperar la URI guardada y mostrar la imagen si está disponible
         val sharedPref = getSharedPreferences("AppPrefs", MODE_PRIVATE)
-        val savedImageUriString = sharedPref.getString("savedImageUri", null)
+        val savedImageUriString = sharedPref.getString("savedImageUri_$currentItemPosition", null)
         if (!savedImageUriString.isNullOrEmpty()) {
             val savedImageUri = Uri.parse(savedImageUriString)
             val bitmap = getBitmapFromUri(savedImageUri)
@@ -99,11 +102,10 @@ class MainActivity4 : AppCompatActivity() {
 
     private fun saveImage() {
         val imageUri = getImageUriFromImageView(imageView)
-        if (imageUri != null) {
-            // Guardar la URI en SharedPreferences
+        if (imageUri != null && currentItemPosition != -1) {
+            // Guardar la URI de la imagen en SharedPreferences
             val sharedPref = getSharedPreferences("AppPrefs", MODE_PRIVATE)
-            sharedPref.edit().putString("savedImageUri", imageUri.toString()).apply()
-            // También puedes guardar la imagen en el almacenamiento local si es necesario
+            sharedPref.edit().putString("savedImageUri_$currentItemPosition", imageUri.toString()).apply()
         }
     }
 
